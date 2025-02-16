@@ -19,8 +19,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           allowed-commit-types: "feat,fix"
 
-      - name: Auto Close PR if the Check Commits Fails (i.e. the submitter was a very bad student)
-        if: steps.check_commits.outcome == 'failure'
-        uses: peter-evans/close-pull@v3
-        with:
-          comment: "Your PR has been Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
+#      - name: Auto Close PR if the Check Commits Fails (i.e. the submitter was a very bad student)
+#        if: steps.check_commits.outcome == 'failure'
+#        uses: peter-evans/close-pull@v3
+#        with:
+#          comment: "Your PR has been Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
