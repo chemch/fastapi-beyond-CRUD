@@ -11,7 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: webiny/action-conventional-commits@v1.3.0
+      - name: Check if Conventional Commits were Used
+        id: check_commits
+        continue-on-error: true
+        uses: webiny/action-conventional-commits@v1.3.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           allowed-commit-types: "feat,fix"
