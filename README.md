@@ -3,7 +3,9 @@
 ## List of Updates Made:
 - Updated README
 - Added Conventional Commit Checker 
-- Add Job to Auto Close Failures for Prior Conventional Check 
+- Add Step to Auto Close Failures for previous Conventional Check 
+- Added Step to Email User That Non-Conventional Check Failed
+- Part 1 is Complete. Recording Video. 
 
 
 
