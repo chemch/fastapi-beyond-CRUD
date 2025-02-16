@@ -3,6 +3,10 @@
 ## List of Updates Made:
 - Updated README
 - Added Conventional Commit Checker 
+- Add Job to Auto Close Failures for Prior Conventional Check 
+
+
+
 ---
 # FastAPI Beyond CRUD 
 
