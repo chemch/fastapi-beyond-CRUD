@@ -38,8 +38,8 @@ jobs:
           password: ${{ secrets.SENDGRID_API_KEY }}
           subject: "PR #${{ github.event.pull_request.number }} Auto Closed - You didn't follow the rules..."
           body: |
-            PR: #${{ github.event.pull_request.number }} has been closed automatically b/c Conventional Commits weren't used.
+            PR: #${{ github.event.pull_request.number }} has been closed automatically b/c Conventional Commits failed.
             REPO: ${{ github.repository }}
             PR REF: ${{ github.event.pull_request.html_url }}
           to: "cac692@nyu.edu"
-          from: "bugles_tycoons_6y@icloud.com"
+          from: "cac692@gmail.com"
