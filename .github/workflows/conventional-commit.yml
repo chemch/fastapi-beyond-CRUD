@@ -42,4 +42,4 @@ jobs:
             REPO: ${{ github.repository }}
             PR REF: ${{ github.event.pull_request.html_url }}
           to: "cac692@nyu.edu"
-          from: "cchemero@dons.usfca.edu"
+          from: "bugles_tycoons_6y@icloud.com"
