@@ -2,7 +2,7 @@
 
 ## List of Updates Made:
 - Updated README
-
+- Added Conventional Commit Checker 
 ---
 # FastAPI Beyond CRUD 
 
