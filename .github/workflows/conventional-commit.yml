@@ -18,28 +18,21 @@ jobs:
         uses: webiny/action-conventional-commits@v1.3.0
         with:
           allowed-commit-types: "feat,fix"
-
-      - name: Auto Close PR if the Check Commits Fails (i.e. the submitter was a very bad student)
-        id: auto_close
-        continue-on-error: true
-        if: steps.check_commits.outcome == 'failure'
-        uses: peter-evans/close-pull@v3
-        with:
-          comment: "Your PR has Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
+#
+#      - name: Auto Close PR if the Check Commits Fails (i.e. the submitter was a very bad student)
+#        id: auto_close
+#        continue-on-error: true
+#        if: steps.check_commits.outcome == 'failure'
+#        uses: peter-evans/close-pull@v3
+#        with:
+#          comment: "Your PR has Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
 
       - name: Send Email Using SendGrid API
         id: send_email
         if: steps.check_commits.outcome == 'failure'
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.sendgrid.net
-          server_port: 587
-          username: apikey
-          password: ${{ secrets.SENDGRID_API_KEY }}
-          subject: "PR #${{ github.event.pull_request.number }} Auto Closed - You didn't follow the rules..."
-          body: |
-            PR: #${{ github.event.pull_request.number }} has been closed automatically b/c Conventional Commits failed.
-            REPO: ${{ github.repository }}
-            PR REF: ${{ github.event.pull_request.html_url }}
-          to: "cac692@nyu.edu"
-          from: "cac692@gmail.com"
+        run: |
+          curl --request POST --url https://api.sendgrid.com/v3/mail/send \
+          --header "Authorization: Bearer $API_KEY" --header 'Content-Type: application/json' \
+          --data '{"personalizations": [{"to": [{"email": "cac692@nyu.edu"}]}],"from": {"email": "cac692@gmail.com"},"subject": "Non Conventional Commits - PR Closed","content": [{"type": "text/plain", "value": "Reopen properly!!"}]}'
+        env:
+          API_KEY: ${{ secrets.SENDGRID_API_KEY}}
