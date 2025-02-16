@@ -1,0 +1,22 @@
+name: Conventional Commit Checker - Chase Chemero
+
+
+
+
+on:
+  pull_request:
+    branches: [ main ]
+
+
+
+jobs:
+  build:
+    name: Checks for Conventional Commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: webiny/action-conventional-commits@v1.3.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          allowed-commit-types: "feat,fix"
