@@ -1,10 +1,8 @@
 name: Conventional Commit Checker - V2
 
-
 on:
   pull_request:
     branches: [ main ]
-
 
 jobs:
   build:
@@ -13,7 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: webiny/action-conventional-commits@v1.3.0
+      - name: Check if Conventional Commits were Used
+        id: check_commits
+        continue-on-error: true
+        uses: webiny/action-conventional-commits@v1.3.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           allowed-commit-types: "feat,fix"
+
+#      - name: Auto Close PR if the Check Commits Fails (i.e. the submitter was a very bad student)
+#        if: steps.check_commits.outcome == 'failure'
+#        uses: peter-evans/close-pull@v3
+#        with:
+#          comment: "Your PR has been Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
