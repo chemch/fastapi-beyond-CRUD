@@ -1,12 +1,9 @@
-name: Conventional Commit Checker - V1
-
-
+name: Conventional Commit Checker - V2
 
 
 on:
   pull_request:
     branches: [ main ]
-
 
 
 jobs:
