@@ -25,7 +25,7 @@ jobs:
         if: steps.check_commits.outcome == 'failure'
         uses: peter-evans/close-pull@v3
         with:
-          comment: "Your PR has been Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
+          comment: "Your PR has Auto Closed b/c you did not follow the Conventional Commit Rules...Bad!"
 
       - name: Send Email Using SendGrid API
         id: send_email
@@ -36,7 +36,7 @@ jobs:
           server_port: 587
           username: apikey
           password: ${{ secrets.SENDGRID_API_KEY }}
-          subject: "PR #${{ github.event.pull_request.number }} Auto Closed - You just didn't follow the rules..."
+          subject: "PR #${{ github.event.pull_request.number }} Auto Closed - You didn't follow the rules..."
           body: |
             PR: #${{ github.event.pull_request.number }} has been closed automatically b/c Conventional Commits weren't used.
             REPO: ${{ github.repository }}
