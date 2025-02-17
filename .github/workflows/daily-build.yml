@@ -27,7 +27,7 @@ jobs:
         id: install_deps
         run: |
           python -m venv chemch
-          source /env/bin/activate
+          source /chemch/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
