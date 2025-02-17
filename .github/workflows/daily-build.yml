@@ -35,7 +35,7 @@ jobs:
       - name: Run Python Tests
         id: run_tests
         run: |
-          source /env/bin/activate
+          source chemch-t/bin/activate
           pytest src/tests/
 
       - name: Send Email Notification Using SendGrid API for Failure
