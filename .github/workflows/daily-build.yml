@@ -38,6 +38,7 @@ jobs:
           source chemch-t/bin/activate
           cp .env.example .env
           export $(grep -v '^#' .env | xargs)
+          cat .env | sed 's/^/echo "/; s/$/" >> $GITHUB_ENV/' | bash
           pytest src/tests/
 
       - name: Move to Docker Upload
