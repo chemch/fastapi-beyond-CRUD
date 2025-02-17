@@ -8,6 +8,7 @@
 - Part 1: Invalid Msg - Auto Close - Complete
 - Add debug commit type as acceptable 
 - Define initial version of python build script
+- Adjusted time to be UTC to test timing of auto build 
 
 ---
 # FastAPI Beyond CRUD 
