@@ -1,6 +1,18 @@
-# Assignment 7 - Conventional Commits
+# CS686 - Assignment 7 - Conventional Commits - Chemch - Chase Chemero
 
-## List of Updates Made:
+# How to Run with Docker:
+- Check Out Repo:
+  - RUN: git clone https://github.com/jod35/fastapi-beyond-CRUD.git
+- Change Directory
+  - RUN: cd fastapi-beyond-CRUD
+- Run App (You don't need to copy .env if you want to use default configs)
+  - RUN: docker compose up
+- Test API via your Favorite Browswer
+  - BROWSE TO: http://localhost:8000/api/v1/books/test
+    - You should get 'API Running!' in response
+
+
+## List of Updates Required to Get Docker Working:
 - Updated README
 - Added Conventional Commit Checker 
 - Add Step to Auto Close Failures for previous Conventional Check 
@@ -9,15 +21,20 @@
 - Add debug commit type as acceptable 
 - Define initial version of python build script
 - Adjusted time to be UTC to test timing of auto build 
+- Populate .env directly to avoid needing to copy it (just makes it simpler)
+- Make Postgre connection Async
+- Update username and password for Postgre to match Compose.yml
+- Add Verbose logging into DockerFile to help with debugging
+- Adding DB URL into Dockerfile so Alembic DB priming works
+- Allow commiting of .env file (.gitignore update)
+- Add test endpoint to make it easy to test that the application runs healthy
+- Update env.py b/c it overrides Alembic.ini on startup
+- Part 2 - Auto Build and Upload to Docker WORKING App
+- Create Video to show how it all works
 
 ---
-# FastAPI Beyond CRUD 
-
-This is the source code for the [FastAPI Beyond CRUD](https://youtube.com/playlist?list=PLEt8Tae2spYnHy378vMlPH--87cfeh33P&si=rl-08ktaRjcm2aIQ) course. The course focuses on FastAPI development concepts that go beyond the basic CRUD operations.
-
-For more details, visit the project's [website](https://jod35.github.io/fastapi-beyond-crud-docs/site/).
-
-## Table of Contents
+# OLD README NOTES (FOR REF)
+# FastAPI Beyond CRUD Table of Contents
 
 1. [Getting Started](#getting-started)
 2. [Prerequisites](#prerequisites)
@@ -88,6 +105,3 @@ Run the tests using this command
 ```bash
 pytest
 ```
-
-## Contributing
-I welcome contributions to improve the documentation! You can contribute [here](https://github.com/jod35/fastapi-beyond-crud-docs).
