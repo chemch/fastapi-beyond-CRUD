@@ -6,6 +6,8 @@
 - Add Step to Auto Close Failures for previous Conventional Check 
 - Added Step to Email User That Non-Conventional Check Failed
 - Part 1: Invalid Msg - Auto Close - Complete
+- Add debug commit type as acceptable 
+- Define initial version of python build script
 
 ---
 # FastAPI Beyond CRUD 
