@@ -26,8 +26,8 @@ jobs:
       - name: Install Python Requirements
         id: install_deps
         run: |
-          python -m venv chemch
-          source /chemch/bin/activate
+          python -m venv chemch-t
+          source chemch-t/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
