@@ -25,8 +25,11 @@ RUN cat .env
 # entitle required files
 RUN chmod +x runworker.sh
 
-# prime the db
-RUN alembic upgrade head
+# Set the environment variable for the database URL. This can be overwritten by Docker Compose.
+ENV DATABASE_URL="postgresql+asyncpg://chemch:password@db:5432/testDb"
+
+# Run the alembic upgrade command
+CMD ["alembic", "upgrade", "head"]
 
 # start up
 EXPOSE 8000
