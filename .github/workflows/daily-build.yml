@@ -1,7 +1,7 @@
 name: daily-build
 on:
   schedule:
-    - cron: '15 18 * * *'
+    - cron: '25 2 * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Send Email Notification Using SendGrid API
+      - name: Send Email Notification Using SendGrid API for Failure
         id: send_email
-        if: success()
+        if: failure()
         run: |
           curl --request POST --url https://api.sendgrid.com/v3/mail/send \
           --header "Authorization: Bearer $API_KEY" --header 'Content-Type: application/json' \
