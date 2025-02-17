@@ -35,7 +35,7 @@ services:
     image: postgres:15
 
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: chemch
       POSTGRES_DB: testDb
       POSTGRES_PASSWORD: password
 
@@ -55,6 +55,7 @@ services:
 
     networks:
      - app-network
+
 
   celery:
     build: .
