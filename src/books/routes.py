@@ -25,6 +25,9 @@ async def get_all_books(
     books = await book_service.get_all_books(session)
     return books
 
+@book_router.get("/test")
+async def test():
+    return "API Running!"
 
 @book_router.get(
     "/user/{user_uid}", response_model=List[Book], dependencies=[role_checker]

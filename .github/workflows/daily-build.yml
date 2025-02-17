@@ -54,7 +54,7 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Push Image Using GitHub Account
+      - name: Build and Push Image Using GitHub Account
         id: push_img
         if: success()
         env:
