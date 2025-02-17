@@ -5,8 +5,7 @@
 - Added Conventional Commit Checker 
 - Add Step to Auto Close Failures for previous Conventional Check 
 - Added Step to Email User That Non-Conventional Check Failed
-- Part 1: Invalid Msg - Auto Close
-
+- Part 1: Invalid Msg - Auto Close - Complete
 
 ---
 # FastAPI Beyond CRUD 
