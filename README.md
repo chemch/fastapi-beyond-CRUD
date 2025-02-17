@@ -32,6 +32,12 @@
 - Part 2 - Auto Build and Upload to Docker WORKING App
 - Create Video to show how it all works
 
+# Video Walkthrough
+- Valid Commit Message - Doesn't Auto Close
+- Invalid Commit Message - Auto Close and Email
+- Daily Build - Uploads to Built Image to Docker
+- Docker Compose - Show App Works
+
 ---
 # OLD README NOTES (FOR REF)
 # FastAPI Beyond CRUD Table of Contents
