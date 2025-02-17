@@ -6,6 +6,7 @@
 - Add Step to Auto Close Failures for previous Conventional Check 
 - Added Step to Email User That Non-Conventional Check Failed
 - Part 1 is Complete - First a Valid Commit
+- Part 1: Now an invalid Commit which will auto close. 
 
 
 ---
