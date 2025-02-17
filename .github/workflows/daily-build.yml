@@ -57,8 +57,11 @@ jobs:
         id: push_img
         if: success()
         run: |
-          docker build -t chemch/fast-api:latest .
-          docker push chemch/fast-api:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/fast-api:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/fast-api:latest
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Send Email Notification Using SendGrid API for Failure
         id: send_email
