@@ -25,7 +25,7 @@ jobs:
 #        if: steps.check_commits.outcome == 'failure'
 #        uses: peter-evans/close-pull@v3
 #        with:
-#          comment: "Your PR has Auto Closed b/c you did not follow the Conventional Commit Rules."
+#          comment: "The PR has Auto Closed b/c you did not follow the Conventional Commit Rules."
 #
 #      - name: Send Email Using SendGrid API
 #        id: send_email
@@ -33,6 +33,6 @@ jobs:
 #        run: |
 #          curl --request POST --url https://api.sendgrid.com/v3/mail/send \
 #          --header "Authorization: Bearer $API_KEY" --header 'Content-Type: application/json' \
-#          --data '{"personalizations": [{"to": [{"email": "cchemero@dons.usfca.edu"}]}],"from": {"email": "cchemero@dons.usfca.edu"},"subject": "Notification to Developer...Non Conventional Commits - PR Closed","content": [{"type": "text/plain", "value": "Reopen properly!!"}]}'
+#          --data '{"personalizations": [{"to": [{"email": "cchemero@dons.usfca.edu"}]}],"from": {"email": "cchemero@dons.usfca.edu"},"subject": "Notification to Developer...Non Conventional Commits - PR Closed","content": [{"type": "text/plain", "value": "This is your Email Notification. Reopen properly!!"}]}'
 #        env:
 #          API_KEY: ${{ secrets.SENDGRID_API_KEY}}
