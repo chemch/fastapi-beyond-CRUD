@@ -34,8 +34,8 @@
 
 # Video Walkthrough
 - Valid Commit Message - Doesn't Auto Close - Complete
-- Invalid Commit Message - Auto Close and Email - 
-- Daily Build - Uploads to Built Image to Docker
+- Invalid Commit Message - Auto Close and Email - Complete
+- Daily Build - Uploads to Built Image to Docker - Complete. Showed its Schedule and ran it manually to show realtime build. 
 - Docker Compose - Show App Works
 
 ---
