@@ -33,7 +33,7 @@
 - Create Video to show how it all works
 
 # Video Walkthrough
-- Valid Commit Message - Doesn't Auto Close - 
+- Valid Commit Message - Doesn't Auto Close - Complete
 - Invalid Commit Message - Auto Close and Email - 
 - Daily Build - Uploads to Built Image to Docker
 - Docker Compose - Show App Works
