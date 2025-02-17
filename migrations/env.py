@@ -9,10 +9,9 @@ from alembic import context
 from sqlmodel import SQLModel
 from src.config import Config
 
+# database_url = Config.DATABASE_URL
+database_url = "postgresql+asyncpg://chemch:password@db:5432/testDb"
 
-database_url = Config.DATABASE_URL
-
-# this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
 
